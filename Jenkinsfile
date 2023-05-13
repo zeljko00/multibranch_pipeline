@@ -15,5 +15,18 @@ pipeline {
                 sh 'cat README.txt'
             }
         } 
+stage('Print on feature branch'){
+             when {
+                    branch "second-feature"
+                }
+            steps {
+                script {
+      sh "git checkout master"
+      sh "git merge second-branch"
+      sh "git push origin master"
+    }
+               
+            }
+        }
     }
 }
