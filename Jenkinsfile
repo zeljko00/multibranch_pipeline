@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages{
-        stage('Clone repo'){
-            steps {
-                checkout scm
-            }
-        } 
         stage('Print on feature branch'){
              when {
                     branch "*-feature*"
@@ -27,7 +22,7 @@ stage('Merge'){
             steps {
                 script {
       sh "git checkout master"
-      sh "git merge second-feature"
+      sh "git merge origin/second-feature"
       sh "git push origin master"
     }
                
