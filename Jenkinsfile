@@ -27,8 +27,9 @@ stage('Merge'){
             steps {
                 script {
       sh "git checkout master"
-      sh "git merge second-branch"
-      sh "git push origin master"
+//       sh "git merge second-branch"
+//       sh "git push origin master"
+                    sh 'git log'
     }
                
             }
