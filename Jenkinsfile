@@ -15,7 +15,7 @@ pipeline {
                 sh 'cat README.txt'
             }
         } 
-stage('Print on feature branch'){
+stage('Merge'){
              when {
                     branch "second-feature"
                 }
