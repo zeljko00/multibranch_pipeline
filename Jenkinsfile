@@ -21,8 +21,8 @@ stage('Merge'){
                 }
             steps {
                 script {
-                    sh "git config --global user.name zeljko"
-          sh "git config --global user.email zeljko@gmail.com"
+                    sh "git config --global user.name zeljko00"
+          sh "git config --global user.email tripic.zeljko@gmail.com"
       sh "git checkout master"
       sh "git merge -X theirs origin/second-feature"
       sh "git push origin master"
