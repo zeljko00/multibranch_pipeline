@@ -21,7 +21,6 @@ stage('Merge'){
                 }
             steps {
                 script {
-                    sh 'git config --global credential.helper store'
                     sh "git config --global user.name zeljko00"
           sh "git config --global user.email tripic.zeljko@gmail.com"
       sh "git checkout master"
