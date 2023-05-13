@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages{
+        stage('Clone repo'){
+            steps {
+                checkout scm
+            }
+        } 
         stage('Print on feature branch'){
              when {
                     branch "*-feature*"
