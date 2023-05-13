@@ -15,5 +15,20 @@ pipeline {
                 sh 'cat README.txt'
             }
         } 
+stage('Merge'){
+             when {
+                    branch "second-feature"
+                }
+            steps {
+                script {
+                    sh "git config --global user.name zeljko"
+          sh "git config --global user.email zeljko@gmail.com"
+      sh "git checkout master"
+      sh "git merge -X theirs origin/second-feature"
+      sh "git push origin master"
+    }
+               
+            }
+        }
     }
 }
