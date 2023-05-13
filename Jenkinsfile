@@ -24,7 +24,7 @@ stage('Merge'){
                     sh "git config --global user.name zeljko"
           sh "git config --global user.email zeljko@gmail.com"
       sh "git checkout master"
-      sh "git merge --strategy=theirse origin/second-feature"
+      sh "git merge --strategy=theirs origin/second-feature"
       sh "git push origin master"
     }
                
