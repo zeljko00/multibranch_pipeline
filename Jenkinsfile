@@ -6,7 +6,7 @@ pipeline {
                     branch "*-feature*"
                 }
             steps {
-                sh "echo 'Hello from master branch!'"
+                sh "echo 'Hello from feature branch!'"
                
             }
         }
