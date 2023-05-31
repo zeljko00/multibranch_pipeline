@@ -1,1 +1,1 @@
-Enhanced hello from Multibranch pipeline!
+Hidden hello from Multibranch pipeline!
